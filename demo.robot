@@ -30,7 +30,7 @@ Access to Forms page
     Input Text  xpath=//textarea[@id='currentAddress']  1234 Main Street
     Execute JavaScript    document.getElementById("fixedban").remove();
     Execute JavaScript    document.querySelector("footer").remove();
-    Click Button    xpath://button[@type='submit']
+    Click Element   xpath://button[@type='submit']
     Wait Until Page Contains Element  xpath=//button[@id='closeLargeModal']
-    Click Button  //button[@id='closeLargeModal']
+    Click Element   xpath://button[@id='closeLargeModal']
     
