@@ -23,7 +23,7 @@ Access to Forms page
     Input Text  xpath=//input[@id='subjectsInput']  English
     Press Keys  xpath=//input[@id='subjectsInput']  RETURN
     Input Text  xpath=//input[@id='dateOfBirthInput']  01 Oct 1990
-    Input Text  xpath=//textarea[@id='currentAddress']  1234 Main St
+    Input Text  xpath=//textarea[@id='currentAddress']  1234 Main Street
     Execute JavaScript    document.evaluate("//div[@id='adplus-anchor']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.remove();
     Click Button    xpath://button[@type='submit']
     Wait Until Page Contains Element  xpath=//div[@class='modal-content']
