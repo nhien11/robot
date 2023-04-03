@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
+resource  variable.robot 
 Suite Setup    Open Browser    https://demoqa.com/    chrome
 Suite Teardown    Close Browser
-
 *** Test Cases ***
 Access to Forms page
     Maximize Browser Window
@@ -38,6 +38,28 @@ Access to Forms page
     Click Element   xpath=//div[@class=' css-1hwfws3']//div[contains(text(), 'Select City')]
     Click Element  xpath=//div[contains(text(),'Delhi')]
     Click Element   xpath=//button[@type='submit']
-    Wait Until Page Contains Element  xpath=//button[@id='closeLargeModal']
+    sleep  4s
+verify
+    ${actualResult}=    Get Text    //td[text()='Student Name']//..//td[2]
+    Should Be Equal    ${actualResult}   ${studentName} 
+    ${actualResult}=    Get Text    //td[text()='Student Email']//..//td[2]
+    Should Be Equal    ${actualResult}  ${studentEmail}
+    ${actualResult}=    Get Text  //td[text()='Mobile']//..//td[2]
+    Should Be Equal    ${actualResult}  ${Mobile}
+    ${actualResult}=    Get Text    //td[text()='Gender']//..//td[2]
+    ${actualResult}=    Get Text    //td[text()='Date of Birth']//..//td[2]
+    Should Be Equal    ${actualResult}    ${DateofBirth}
+    ${actualResult}=    Get Text    //td[text()='Subjects']//..//td[2]
+    Should Be Equal    ${actualResult}    ${Subject}
+    ${actualResult}=    Get Text    //td[text()='Hobbies']//..//td[2]
+    Should Be Equal    ${actualResult}    ${Hobbies}
+    ${actualResult}=    Get Text    //td[text()='Picture']//..//td[2]
+    Should Be Equal    ${actualResult}    ${Picture}
+    ${actualResult}=    Get Text    //td[text()='Address']//..//td[2]
+    Should Be Equal    ${actualResult}    ${Address}
+    ${actualResult}=    Get Text    //td[text()='State and City']//..//td[2]
+    Should Be Equal    ${actualResult}    ${State&City}
+     Wait Until Page Contains Element  xpath=//button[@id='closeLargeModal']
     Click Element   xpath://button[@id='closeLargeModal']
-    
+
+
