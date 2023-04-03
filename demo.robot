@@ -23,14 +23,21 @@ Access to Forms page
     Execute JavaScript  window.scrollBy(0,3000)
     Input Text  xpath=//input[@id='subjectsInput']  English
     Press Keys  xpath=//input[@id='subjectsInput']  RETURN
-     Wait Until Element Is Visible    //input[@id='dateOfBirthInput']
-  Click Element    //input[@id='dateOfBirthInput']
-  Wait Until Element Is Visible    //div[@class='react-datepicker__month-container']
-  Click Element    //div[@class='react-datepicker__day react-datepicker__day--027']
+    Wait Until Element Is Visible    //input[@id='dateOfBirthInput']
+    Click Element    //input[@id='dateOfBirthInput']
+    Wait Until Element Is Visible    //div[@class='react-datepicker__month-container']
+   Click Element    //div[@class='react-datepicker__day react-datepicker__day--027']
     Input Text  xpath=//textarea[@id='currentAddress']  1234 Main Street
+    Choose File   xpath=//input[@type='file']   C:/Users/TRAN THI THUY NHIEN/OneDrive/Tài liệu/BT Vong Lap/BangCuuChuong
+    Click Element    xpath=//label[contains(text(), 'Sports')]
+    Click Element    xpath=//label[contains(text(), 'Music')]
     Execute JavaScript    document.getElementById("fixedban").remove();
     Execute JavaScript    document.querySelector("footer").remove();
-    Click Element   xpath://button[@type='submit']
+    Click Element   xpath=//div[@class=' css-1hwfws3']//div[contains(text(), 'Select State')]
+    Click Element  xpath=//div[contains(text(), 'NCR')]
+    Click Element   xpath=//div[@class=' css-1hwfws3']//div[contains(text(), 'Select City')]
+    Click Element  xpath=//div[contains(text(),'Delhi')]
+    Click Element   xpath=//button[@type='submit']
     Wait Until Page Contains Element  xpath=//button[@id='closeLargeModal']
     Click Element   xpath://button[@id='closeLargeModal']
     
