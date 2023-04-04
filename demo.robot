@@ -8,7 +8,7 @@ Suite Teardown    Close Browser
 *** Test Cases ***
 Access to Forms page
     Access Forms
-    Input form
+    Input Form
     Click Element                    ${Submit}
     Verify Form
     Click Element                    ${Close}
