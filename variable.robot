@@ -8,7 +8,9 @@ ${ClickGender}                    xpath=//label[@for='gender-radio-1']
 ${InputMobile}                    xpath=//input[@id="userNumber"]
 ${Selectdob}                      xpath=//input[@id='dateOfBirthInput']
 ${Wait Until Element Is Visible}  xpath=//div[@class='react-datepicker__month-container']
-${Selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--027'] 
+${selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--030']
+${selectmonth}                    xpath=//select[@class="react-datepicker__month-select"]
+${selectyear}                     xpath=//select[@class="react-datepicker__year-select"]
 ${InputSubjects}                  xpath=//input[@id='subjectsInput']  
 ${ClickHobbies1}                  xpath=//label[contains(text(),'Sports')]
 ${ClickHobbies2}                  xpath=//label[contains(text(),'Music')]
@@ -31,12 +33,13 @@ ${GtextHobbies}   xpath=//td[text()='Hobbies']/following-sibling::td
 ${GtextPicture}   xpath=//td[text()='Picture']/following-sibling::td
 ${GtextAddress}   xpath=//td[text()='Address']/following-sibling::td
 ${GtextSaC}       xpath=//td[text()='State and City']/following-sibling::td
+
 #DULIEU
 ${StudentName}  John Smith
 ${StudentEmail}  john.smith@example.com
 ${Mobile}  0704519427
 ${Gender}  Male
-${DateofBirth}  27 April,2023 
+${DateofBirth}  30 October,2001
 ${Subject}    Hindi
 ${Hobbies}  Sports, Music
 ${Picture}  BangCuuChuong
