@@ -12,7 +12,7 @@ ${UsernameL}        xpath=//input[@placeholder="UserName"]
 ${PasswordL}        xpath=//input[@placeholder="Password"]
 ${BtLogin}               xpath=//button[@id="login"]
 ${BtLogout}
-${userName}        tranthiiii
+${userName}        tranthi3
 ${Password}        Thuynhien1@
 ${exAlertMessage}  User Register Successfully.
 ${gtextUserName}  xpath=//label[@id="userName-value"]
