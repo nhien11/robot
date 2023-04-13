@@ -7,11 +7,13 @@ Suite Setup
   Access Book Store Application
 Access Book Store Application
     Maximize Browser Window
-    Wait Until Element Is Visible  ${Book}
-    Execute JavaScript             window.scrollBy(0,3000)
-    Click Element                  ${Book}
+    Wait Until Element Is Visible   ${Book}
+    Execute JavaScript              window.scrollBy(0,3000)
+    Click Element                   ${Book}
     sleep  3s
 Register to Book Store
+    Execute JavaScript             document.getElementById("fixedban").remove();
+    Execute JavaScript             document.querySelector("footer").remove();
     Click Element                  ${login}
     Click Element                  ${NewUser}
     Input Text                     ${FirstNameR}  tran
