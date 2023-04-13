@@ -20,8 +20,8 @@ ${SelectState}                    xpath=//div[contains(text(),'Select State')]
 ${ClickState}                     xpath=//div[contains(text(),'NCR')]
 ${SelectCity}                     xpath=//div[contains(text(),'Select City')]
 ${ClickCity}                      xpath=//div[contains(text(),'Delhi')]
-${Submit}                         xpath://button[@type='submit']
-${Close}                          xpath://button[@id="closeLargeModal"]
+${Submit}                         xpath=//button[@type='submit']
+${Close}                          xpath=//button[@id="closeLargeModal"]
 #GETTEXT
 ${GtextName}      xpath=//td[text()='Student Name']/following-sibling::td
 ${GtextEmail}     xpath=//td[text()='Student Email']/following-sibling::td
@@ -45,4 +45,24 @@ ${Hobbies}  Sports, Music
 ${Picture}  BangCuuChuong
 ${Address}  1234 Main Street
 ${State&City}  NCR Delhi
+
+${Book}  xpath=//h5[text()='Book Store Application']
+${login}                 xpath=//span[contains(text(),'Login')]
+${NewUser}               xpath=//button[text()='New User'] 
+${UsernameR}        xpath=//input[@id="userName"]
+${PasswordR}        xpath=//input[@id="password"]
+${clickiFrame}           xpath=//iframe[@title='reCAPTCHA']
+${BtRegister}              xpath=//button[@id='register']              
+${FirstNameR}       xpath=//input[@id="firstname"]
+${LastNameR}        xpath=//input[@id="lastname"]
+${UsernameL}        xpath=//input[@placeholder="UserName"]
+${PasswordL}        xpath=//input[@placeholder="Password"]
+${BtLogin}               xpath=//button[@id="login"]
+${BtLogout}
+${userName}        tranthi9
+${Password}        Thuynhien1@
+${exAlertMessage}  User Register Successfully.
+${gtextUserName}  xpath=//label[@id="userName-value"]
+${mainPage}    //a[@href="https://demoqa.com"]
+
  
