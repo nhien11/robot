@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary                     
 Library    String
-Resource    KEYWORD2.robot                            
-Resource    VARIABLE2.robot
+Resource      VARIABLE2.robot                           
+Resource      KEYWORD2.robot
 Suite Setup   Suite Setup                       
 Suite Teardown    Close Browser
 *** Test Cases ***
