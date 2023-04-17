@@ -1,5 +1,5 @@
 *** Variables ***
-${Form}                           xpath=//h5[text() = 'Forms']
+${Form}                           //h5[text() = 'Forms']
 ${PracticeForm}                   xpath=//span[contains(text(),'Practice Form')]
 ${InputFirstName}                 xpath=//input[@id="firstName"]
 ${InputLastName}                  xpath=//input[@id="lastName"]
@@ -7,10 +7,10 @@ ${InputEmail}                     xpath=//input[@id="userEmail"]
 ${ClickGender}                    xpath=//label[@for='gender-radio-1']
 ${InputMobile}                    xpath=//input[@id="userNumber"]
 ${Selectdob}                      xpath=//input[@id='dateOfBirthInput']
-${Wait Until Element Is Visible}  xpath=//div[@class='react-datepicker__month-container']
-${selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--030']
-${selectmonth}                    xpath=//select[@class="react-datepicker__month-select"]
-${selectyear}                     xpath=//select[@class="react-datepicker__year-select"]
+${WaitUntil}  xpath=//div[@class='react-datepicker__month-container']
+${Selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--030']            #
+${Selectmonth}                    xpath=//select[@class="react-datepicker__month-select"]
+${Selectyear}                     xpath=//select[@class="react-datepicker__year-select"]
 ${InputSubjects}                  xpath=//input[@id='subjectsInput']  
 ${ClickHobbies1}                  xpath=//label[contains(text(),'Sports')]
 ${ClickHobbies2}                  xpath=//label[contains(text(),'Music')]
@@ -45,24 +45,33 @@ ${Hobbies}  Sports, Music
 ${Picture}  BangCuuChuong
 ${Address}  1234 Main Street
 ${State&City}  NCR Delhi
+${FName}   John
+${LName}  Smith
+${Cfile}    C:/Users/TRAN THI THUY NHIEN/OneDrive/Tài liệu/BT Vong Lap/BangCuuChuong
+${Semonth}  October
+${Syear}  2001
+${JavaScript}      window.scrollBy(0,3000)
 
-${Book}  xpath=//h5[text()='Book Store Application']
-${login}                 xpath=//span[contains(text(),'Login')]
-${NewUser}               xpath=//button[text()='New User'] 
+${Book}             xpath=//h5[text()='Book Store Application']
+${Login}            xpath=//span[contains(text(),'Login')]
+${NewUser}          xpath=//button[text()='New User'] 
 ${UsernameR}        xpath=//input[@id="userName"]
 ${PasswordR}        xpath=//input[@id="password"]
-${clickiFrame}           xpath=//iframe[@title='reCAPTCHA']
-${BtRegister}              xpath=//button[@id='register']              
+${ClickiFrame}      xpath=//iframe[@title='reCAPTCHA']
+${BtRegister}       xpath=//button[@id='register']              
 ${FirstNameR}       xpath=//input[@id="firstname"]
 ${LastNameR}        xpath=//input[@id="lastname"]
 ${UsernameL}        xpath=//input[@placeholder="UserName"]
 ${PasswordL}        xpath=//input[@placeholder="Password"]
-${BtLogin}               xpath=//button[@id="login"]
-${BtLogout}
-${userName}        tranthi9
+${BtLogin}          xpath=//button[@id="login"]
+${BtLogout}         xpath=//button[contains(text(),'Log out')]
+${UserName}        trannhienthhH
 ${Password}        Thuynhien1@
-${exAlertMessage}  User Register Successfully.
-${gtextUserName}  xpath=//label[@id="userName-value"]
-${mainPage}    //a[@href="https://demoqa.com"]
-
- 
+${FNameR}          tran
+${LNameR}          thi
+${ExAlertMessage}  User Register Successfully.
+${GtextUserName}   xpath=//label[@id="userName-value"]
+${MainPage}        xpath=//a[@href="https://demoqa.com"]
+${BtLogout}        xpath=//button[contains(text(), 'Log out')]
+@{fields}    ${GtextName}    ${GtextEmail}    ${GtextGender}    ${GtextMobile}    ${GtextDoB}    ${GtextSubjects}    ${GtextHobbies}    ${GtextPicture}    ${GtextAddress}    ${GtextSaC}
+@{values}    ${StudentName}    ${StudentEmail}    ${Gender}    ${Mobile}    ${DateofBirth}    ${Subject}    ${Hobbies}    ${Picture}    ${Address}    ${State&City}

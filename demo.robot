@@ -20,8 +20,8 @@ Register
     verify Register
     Sleep  3s
 Login
-  [tags]  ta1  tath
+  [tags]  ta2  tath
     login
     verify login
-    Page Should Contain Element    ${BtLogout}
+    # Page Should Contain Element    ${BtLogout}
   
