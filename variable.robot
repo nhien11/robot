@@ -1,4 +1,6 @@
 *** Variables ***
+${Open}                          https://demoqa.com/   
+${chrome}                           chrome
 ${Form}                           //h5[text() = 'Forms']
 ${PracticeForm}                   xpath=//span[contains(text(),'Practice Form')]
 ${InputFirstName}                 xpath=//input[@id="firstName"]
@@ -7,7 +9,11 @@ ${InputEmail}                     xpath=//input[@id="userEmail"]
 ${ClickGender}                    xpath=//label[@for='gender-radio-1']
 ${InputMobile}                    xpath=//input[@id="userNumber"]
 ${Selectdob}                      xpath=//input[@id='dateOfBirthInput']
-${WaitUntil}  xpath=//div[@class='react-datepicker__month-container']
+${Appear}                         xpath=//div[@class='react-datepicker__month-container']
+# ${DAY}            10
+# ${MONTH}          April
+# ${YEAR}           1995
+
 ${Selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--030']            #
 ${Selectmonth}                    xpath=//select[@class="react-datepicker__month-select"]
 ${Selectyear}                     xpath=//select[@class="react-datepicker__year-select"]
@@ -50,7 +56,7 @@ ${LName}  Smith
 ${Cfile}    C:/Users/TRAN THI THUY NHIEN/OneDrive/Tài liệu/BT Vong Lap/BangCuuChuong
 ${Semonth}  October
 ${Syear}  2001
-${JavaScript}      window.scrollBy(0,3000)
+${Windowsr}      window.scrollBy(0,3000)
 
 ${Book}             xpath=//h5[text()='Book Store Application']
 ${Login}            xpath=//span[contains(text(),'Login')]
@@ -65,7 +71,7 @@ ${UsernameL}        xpath=//input[@placeholder="UserName"]
 ${PasswordL}        xpath=//input[@placeholder="Password"]
 ${BtLogin}          xpath=//button[@id="login"]
 ${BtLogout}         xpath=//button[contains(text(),'Log out')]
-${UserName}        trannhienthhH
+${UserName}        trannhienthhf
 ${Password}        Thuynhien1@
 ${FNameR}          tran
 ${LNameR}          thi

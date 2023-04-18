@@ -3,11 +3,11 @@ Library    SeleniumLibrary
 Resource    variable.robot
 *** Keywords ***
 Suite Setup
-  Open Browser   https://demoqa.com/    chrome
+  Open Browser  ${Open}   ${chrome} 
   Maximize Browser Window
 Access Forms
     Wait Until Element Is Visible  ${Form}
-    Execute JavaScript             ${JavaScript}
+    Execute JavaScript             ${Windowsr} 
     Click Element                  ${Form}
 Input Form
     Click Element                  ${PracticeForm}
@@ -15,12 +15,15 @@ Input Form
     Input Text                     ${InputLastName}     ${LName}
     Input Text                     ${InputEmail}  ${StudentEmail}
     Wait Until Element Is Visible  ${ClickGender}
-    Execute JavaScript             ${JavaScript} 
+    Execute JavaScript             ${Windowsr}  
     Click Element                  ${ClickGender}
     Input Text                     ${InputMobile}  ${Mobile}
     Wait Until Element Is Visible  ${Selectdob}
     Click Element                  ${Selectdob}
-    Wait Until Element Is Visible  ${WaitUntil}
+    Wait Until Element Is Visible  ${Appear}
+    # Click Element    id=dateOfBirthInput
+    # Input Text    id=dateOfBirthInput    -     # Xóa giá trị cũ
+    # Input Text    id=dateOfBirthInput    ${DAY}-${MONTH}-${YEAR}
     Click Element                  ${Selectmonth}
     Press Keys                     ${Selectmonth}   ${Semonth}
     Click Element                  ${Selectyear}
@@ -38,6 +41,7 @@ Input Form
     Click Element                  ${ClickState}
     Click Element                  ${SelectCity}
     Click Element                  ${ClickCity}
+    Click Element                    ${Submit}
 Verify Form
 #   ${actualResult}=    Get Text    ${GtextName}
 #     Should Be Equal    ${actualResult}    ${studentName}
@@ -59,35 +63,37 @@ Verify Form
 #     Should Be Equal    ${actualResult}    ${Address}
 #     ${actualResult}=    Get Text    ${GtextSaC}
 #     Should Be Equal    ${actualResult}    ${State&City}
-        FOR    ${index}    IN RANGE    0    ${fields.__len__()}
-        ${field}=    Set Variable    ${fields[${index}]}
-        ${expectedValue}=    Set Variable    ${values[${index}]}
-        ${actualResult}=    Get Text    ${field}
-        Should Be Equal    ${actualResult}    ${expectedValue}
+    FOR    
+    ...    ${index}    IN RANGE    0    ${fields.__len__()}
+           ${field}=    Set Variable    ${fields[${index}]}
+           ${expectedValue}=    Set Variable    ${values[${index}]}
+           ${actualResult}=    Get Text    ${field}
+           Should Be Equal    ${actualResult}    ${expectedValue}
     END
+    Click Element                    ${Close}
 Access Book Store Application
-    Wait Until Element Is Visible  ${mainPage}
-    Click Element                  ${mainPage}
+    Wait Until Element Is Visible  ${MainPage}
+    Click Element                  ${MainPage}
     Wait Until Element Is Visible   ${Book}
-    Execute JavaScript              ${JavaScript}
+    Execute JavaScript              ${Windowsr} 
     Click Element                   ${Book}
     Sleep  3s
 Register to Book Store
     Execute JavaScript             document.getElementById("fixedban").remove();
     Execute JavaScript             document.querySelector("footer").remove();
-    Click Element                  ${login}
+    Click Element                  ${Login}
     Click Element                  ${NewUser}
     Input Text                     ${FirstNameR}   ${FNameR}
     Input Text                     ${LastNameR}    ${LNameR}
-    Input Text                     ${UsernameR}   ${userName}
+    Input Text                     ${UsernameR}   ${UserName}
     Input Password                 ${PasswordR}   ${Password}
     Sleep  2s
-    Wait Until Element Is Visible  ${clickiFrame}
-    Execute JavaScript             ${JavaScript}            #
-    Click Element                  ${clickiFrame}
+    Wait Until Element Is Visible  ${ClickiFrame}
+    Execute JavaScript             ${Windowsr}             #
+    Click Element                  ${ClickiFrame}
     Sleep  18s
     Wait Until Element Is Visible  ${BtRegister}
-    Execute JavaScript             ${JavaScript}
+    Execute JavaScript             ${Windowsr} 
     Click Element                  ${BtRegister}  
 verify Register
     ${message}=  Handle Alert  action=ACCEPT                                  #xử lý cửa sổ cảnh báo,action=ACCEPT là chấp nhận (accept) cửa sổ cảnh báo.

@@ -7,21 +7,19 @@ Suite Setup   Suite Setup
 Suite Teardown    Close Browser
 *** Test Cases ***
 Access to Forms page
-    [tags]  ta3  tath
+    [tags]  Run1  Regression
     Access Forms
     Input Form
-    Click Element                    ${Submit}
     Verify Form
-    Click Element                    ${Close}
+    
 Register
-  [tags]  ta1  tath
+  [tags]   Run2   Regression
     Access Book Store Application
     Register to Book Store
     verify Register
     Sleep  3s
 Login
-  [tags]  ta2  tath
+  [tags]   Run3  Regression
     login
     verify login
-    # Page Should Contain Element    ${BtLogout}
   
