@@ -10,10 +10,6 @@ ${ClickGender}                    xpath=//label[@for='gender-radio-1']
 ${InputMobile}                    xpath=//input[@id="userNumber"]
 ${Selectdob}                      xpath=//input[@id='dateOfBirthInput']
 ${Appear}                         xpath=//div[@class='react-datepicker__month-container']
-# ${DAY}            10
-# ${MONTH}          April
-# ${YEAR}           1995
-
 ${Selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--030']            #
 ${Selectmonth}                    xpath=//select[@class="react-datepicker__month-select"]
 ${Selectyear}                     xpath=//select[@class="react-datepicker__year-select"]

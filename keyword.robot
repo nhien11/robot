@@ -21,9 +21,7 @@ Input Form
     Wait Until Element Is Visible  ${Selectdob}
     Click Element                  ${Selectdob}
     Wait Until Element Is Visible  ${Appear}
-    # Click Element    id=dateOfBirthInput
-    # Input Text    id=dateOfBirthInput    -     # Xóa giá trị cũ
-    # Input Text    id=dateOfBirthInput    ${DAY}-${MONTH}-${YEAR}
+
     Click Element                  ${Selectmonth}
     Press Keys                     ${Selectmonth}   ${Semonth}
     Click Element                  ${Selectyear}
@@ -96,7 +94,7 @@ Register to Book Store
     Execute JavaScript             ${Windowsr} 
     Click Element                  ${BtRegister}  
 verify Register
-    ${message}=  Handle Alert  action=ACCEPT                                  #xử lý cửa sổ cảnh báo,action=ACCEPT là chấp nhận (accept) cửa sổ cảnh báo.
+    ${message}=  Handle Alert  action=ACCEPT                                 
     Should Be Equal    ${message}      ${ExAlertMessage}
 login   
     Click Element      ${Login}
@@ -105,7 +103,7 @@ login
     Click Button       ${BtLogin}
     Sleep  3s
 verify login
-    ${actualResult}=  Get Text         ${GtextUserName}                             #sử dụng để lấy nội dung văn bản của phần tử được xác định bởi ${gtextUserName}
+    ${actualResult}=  Get Text         ${GtextUserName}                             
     Should Be Equal   ${actualResult}  ${UserName}
-    # Page Should Contain Element    ${BtLogout}
+    
  
